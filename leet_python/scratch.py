@@ -18,3 +18,14 @@ def test1(a,b):
 a= 5
 b= 5
 print(test1(a,b))
+
+
+def invert(b):
+    if b is None:
+        return 
+
+    invert(b.left)
+    invert(b.right)
+    b.left, b.right = b.left, b.right
+
+    return b
