@@ -1,6 +1,8 @@
 def bubble(z):
     for num in range(len(z) -1, 0, -1):
+        print('num', num)
         for i in range(num):
+            print('i', i)
             if z[i] > z[i + 1]:
                 # 10, 9
                 temp = z[i]
