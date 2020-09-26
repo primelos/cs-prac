@@ -64,22 +64,36 @@
 
 def two_strings(s1, s2):
     s1_dict = {}
-    answer =[]
-    s1_subs = allSubstring(s1)
-    s2_subs = allSubstring(s2)
-    for sub in s2_subs:
-        if sub in s1_subs:
-            answer.append(sub)
+    for char in s1:
+        if char not in s1_dict:
+            s1_dict[char] = 1
         else:
-            return None
-    return answer
-def allSubstring(s):
-    set_str = set()
+            s1_dict[char] += 1
+        print(s1_dict)
+    for i in range(len(s2)):
+        if s2[i] in s1_dict:
+            return 'Yes'
+    return 'No'
+
+# this finds all matching substrings ex: ['n', 'ri', 'in', 'rin', 'ring', 'i', 'g', 'r', 'ng', 'ing']
+# def two_strings(s1, s2):
     
-    for i in range(len(s)):
-        for j in range(i + 1, len(s)+1):
-            set_str.add(s[i:j])
-    return set_str
+#     answer =[]
+#     s1_subs = allSubstring(s1)
+#     s2_subs = allSubstring(s2)
+#     for sub in s2_subs:
+#         if sub in s1_subs:
+#             answer.append(sub)
+#         else:
+#             return None
+#     return answer
+# def allSubstring(s):
+#     set_str = set()
+    
+#     for i in range(len(s)):
+#         for j in range(i + 1, len(s)+1):
+#             set_str.add(s[i:j])
+#     return set_str
 
 
-print(two_strings("string", "ring"))
+print(two_strings("strinng", "ring"))
