@@ -48,13 +48,13 @@ class Solution:
         l4.next = l1 or l2
         return l3.next
         '''
-l1 = ListNode(1)
+l1 = ListNode(14)
 la = ListNode(2)
 l1.next = la
 lb = ListNode(4)
 la.next = lb
 
-l2 = ListNode(1)
+l2 = ListNode(12)
 lc = ListNode(3)
 l2.next = lc
 ld = ListNode(4)
