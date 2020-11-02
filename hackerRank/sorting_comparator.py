@@ -13,8 +13,16 @@ class Player:
         if a.score == b.score:
             return 1 if a.name > b.name else -1
         return 1 if a.score < b.score else -1
-
-
+# 2ND WAY
+        # if a.score > b.score:
+        #     return - 1
+        # elif a.score < b.score:
+        #     return 1
+        # if a.name > b.name:
+        #     return 1
+        # elif a.name < b.name:
+        #     return -1
+        # return 0
         
 
         
